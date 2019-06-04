@@ -2,6 +2,7 @@
 repo for develpment of package to clean data Using R for South American Localities
 
 ## SCOPE
+
 Goals: provide tools to perform geographical and taxonomic validation of herbarium records 
 Groups of organisms: plants, ferns and mosses??? 
 Geographical delimitation: Latin America, with current focus on Brazil???
@@ -11,36 +12,37 @@ Notas:
 O pacote será delimitado mais pelo formato de entrada dos dados que ao tipo de coleção. Mas até então, tudo foi testado apenas para dados de herbário. Mas o speciesLink tem outros tipos de coleção tb…. Ou seja, pensar se precisa ser apenas “herbarium records”. O GBIF mesmo possui muitos outros tipos de registros, que potencialmente já estariam no formato que precisamos, apesar de algumas colunas estarem potencialmente faltando...
 	
 ## INPUT, OUTPUT AND ACCESSORY FILES
+
 Search input: vector of species name(s), genus or families (default = NULL: no name filtering) and vector of collection acronym (default = NULL: all collections available)
-Accessory files:
-Gazeetter (download from a given website or github)
- 
+
 Data output: cbind(input data table, new columns related to the geographical, taxonomical and duplicate-search information and validation/flagging)
 
-
+Accessory files: Gazeetter (download from a given website or github)
+ 
 ## ASSUMPTION OF THE DATA VALIDATION PROCESS
+
 In case of invalid or missing coordinates, we assume that the county, state, county (and locality) are correct (i.e. locality prevails over coordinates), and so the working coordinates are taken from a gazetteer 
 We ignore record coordinates given only at county level, assuming that our gazetteer is a more complete/safe source of county coordinates (this may not be the case for outside Latin America) 
 
 
 ## STEP BY STEP - DATA CLEANING
 
-0 - Data download (or data entry?)
-	0.1 List of collections available for download
-	0.2 Obtaining the links for the DwC, EML and RTF files and other collection metadata
-	0.3 Downloading the content for each collection
-		0.3.1 speciesLink
-		0.3.2 Jabot
-		0.3.3 GBIF
-	0.4 Filtering of the downloaded data? By names or other fields...  
+0. Data download (or data entry?)
+	0.1. List of collections available for download
+	0.2. Obtaining the links for the DwC, EML and RTF files and other collection metadata
+	0.3. Downloading the content for each collection
+		0.3.1. speciesLink
+		0.3.2. Jabot
+		0.3.3. GBIF
+	0.4. Filtering of the downloaded data? By names or other fields...  
 
 Notas: 
-Deixar esse passo para o fim: vale a pena investir nisso ou o usuário irá fornecer a lista de entrada para verificação?
+- Deixar esse passo para o fim: vale a pena investir nisso ou o usuário irá fornecer a lista de entrada para verificação?
 Se quisermos incluir esse passo, será necessário a consulta com speciesLink e Jabot sobre a possibilidade de consulta direta aos servidores deles para download das coleções disponíveis
-Marinez perguntar para Sidnei: podemos usar em um pacote de download de dados os links das coleções fornecidos ao Renato Lima (http://ipt1.cria.org.br/ipt/)  
-Marinez vai falar com Luis Alexandre sobre como usar o ipt do JABOT tb
+- Marinez perguntar para Sidnei: podemos usar em um pacote de download de dados os links das coleções fornecidos ao Renato Lima (http://ipt1.cria.org.br/ipt/)  
+- Marinez vai falar com Luis Alexandre sobre como usar o ipt do JABOT tb
 
-1-  Data editing - names and collector number
+1.  Data editing - names and collector number
 	1.1 Editing collectors and determiners names
 		1.1.1 Getting the first author/determiners for multiple authors
 		1.1.2 Removing unwanted characters and expressions (e.g. “et al.”)
