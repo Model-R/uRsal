@@ -41,12 +41,16 @@ We ignore record coordinates given only at county level, assuming that our gazet
 		
     0.3.3 GBIF
 		
-	0.4. Filtering of the downloaded data? By names or other fields...  
+  0.4. Filtering of the downloaded data? By names or other fields...  
 
 Notas: 
+
 - Deixar esse passo para o fim: vale a pena investir nisso ou o usuário irá fornecer a lista de entrada para verificação?
-Se quisermos incluir esse passo, será necessário a consulta com speciesLink e Jabot sobre a possibilidade de consulta direta aos servidores deles para download das coleções disponíveis
+
+- Se quisermos incluir esse passo, será necessário a consulta com speciesLink e Jabot sobre a possibilidade de consulta direta aos servidores deles para download das coleções disponíveis
+
 - Marinez perguntar para Sidnei: podemos usar em um pacote de download de dados os links das coleções fornecidos ao Renato Lima (http://ipt1.cria.org.br/ipt/)  
+
 - Marinez vai falar com Luis Alexandre sobre como usar o ipt do JABOT tb
 
 1.  Data editing - names and collector number
@@ -66,10 +70,10 @@ Se quisermos incluir esse passo, será necessário a consulta com speciesLink e 
     1.1.6 Assigning occurrences with no collector information
 
     1.1.7 Getting the names in the standardized TDWG format
-Functions ‘format.name’ and ‘format.name1’
+Functions ```format.name``` and ```format.name```
 
     1.1.8 Getting authors/determiners last name
-Function ‘last.name’ adapted from Hans ter Steege function
+Function ```last.name``` adapted from Hans ter Steege function
 
 	1.2 Editing collectors numbers
 	
@@ -77,7 +81,8 @@ Function ‘last.name’ adapted from Hans ter Steege function
 
 
 Notas: 
-Atualmente Renato está fazendo a rotina de edição separada para os dados de cada rede (speciesLink, JABOT, GBIF). Pensar em maneiras de padronizar os campos e nomes dos cabeçalhos de cada rede para ter uma função única.
+
+- Atualmente Renato está fazendo a rotina de edição separada para os dados de cada rede (speciesLink, JABOT, GBIF). Pensar em maneiras de padronizar os campos e nomes dos cabeçalhos de cada rede para ter uma função única.
 
 2. Data editing - locality info and geographical coordinates
 
@@ -99,13 +104,13 @@ Atualmente Renato está fazendo a rotina de edição separada para os dados de c
 
   2.5 Editing coordinates and defining the working coordinates
 	    
-	    2.5.1 	Plain zero coordinates as missing coordinates 
+	    2.5.1 Plain zero coordinates as missing coordinates 
 	
-	    2.5.2    One of the coordinates missing as missing coordinates
+	    2.5.2 One of the coordinates missing as missing coordinates
 	
 	    2.5.3	Possible problems with decimal division (e.g. commas instead of points) 
 	    
-	    2.5.4 	Any coordinate on non-decimal degrees format?	
+	    2.5.4 Any coordinate on non-decimal degrees format?	
 	
 	    2.5.5	Create the working coordinates and define the origin (original vs. gazetteer) and resolution the information (no minutes, no seconds) 
 	    
@@ -118,9 +123,13 @@ Atualmente Renato está fazendo a rotina de edição separada para os dados de c
 
 
 Notas:
+
 - Gazetteer precisa ser revisto quanto a nomenclatura das divisões administrativas entre países (e.g. Peru has region, province (estado?), distritos (municípios?)) 
+
 - Como a inclusão no gazetteer de localidades e sub-localidades é uma novidade, ainda não há uma rotina de padronização dos nomes de localidade (e.g. Parque Nacional => PARNA ou vice-versa) 
+
 - Há várias alterações e correções que são feitas quase manualmente. Pensar em criar um dicionário para as principais correções dos campos localidade (e.g. “S. José” =>  “São José”
+
 - A edição dos dados de localidade do GBIF inclui uma padronização dos nomes dos estados (e.g. RJ => rio de janeiro)
 
 
@@ -141,7 +150,9 @@ Notas:
   4.5 Validating all type specimens (isotype, paratypes, holotypes, etc)
  
 Notas:
+
 - Hoje, a atribuição do mesmo nome válido para todos os nomes encontrados nos herbários é feito pelo meu dicionário de nomes. Mas para o pacote essa atribuição tem que ser automatizada (pacote ‘flora’ ou ‘taxize’?) ou baseada em uma lista fornecida pelo usuário.
+
 - Por uma decisão minha, faço a checagem taxonômica (e as análises posteriores apenas ao nível específico), mas acho que esse passo é opcional e talvez desnecessário em um contexto de um pacote mais abrangente
 
 5. Duplicate search
