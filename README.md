@@ -19,14 +19,16 @@ O pacote será delimitado mais pelo formato de entrada dos dados que ao tipo de 
 
 Search input: vector of species name(s), genus or families (default = NULL: no name filtering) and vector of collection acronym (default = NULL: all collections available)
 
-Data output: cbind(input data table, new columns related to the geographical, taxonomical and duplicate-search information and validation/flagging)
+Data output: cbind(input data table, new columns related to the string editing and to geographical, taxonomical and duplicate-search information and validation/flagging)
 
 Accessory files: Gazeetter (download from a given website or github)
- 
+
+
 ## ASSUMPTION OF THE DATA VALIDATION PROCESS
 
 In case of invalid or missing coordinates, we assume that the county, state, county (and locality) are correct (i.e. locality prevails over coordinates), and so the working coordinates are taken from a gazetteer 
-We ignore record coordinates given only at county level, assuming that our gazetteer is a more complete/safe source of county coordinates (this may not be the case for outside Latin America) 
+
+We ignore record coordinates given only at county level, assuming that our gazetteer is a more complete/safe source of county coordinates (this may not be the case for outside Latin America). It is also important to note that if the occurrence information on the localities are indeed mistaken (eg. wrong/missing county name), than the locality won`t be found in the gazetteer and thus, even if the original coordinates are good, they will be replaced by coordinates
 
 
 ## STEP BY STEP - DATA CLEANING
@@ -179,10 +181,10 @@ Renato ainda vai finalizar esse código...
 good to use at county level (or best resolution available from GDAM 3.6 - state, country) for all Latin American countries
 Renato completed to add localities from TreeCo, CNCFlora and IBGE. Done!
 Renato obtained >1 million locality names from geonames for all Latin American countries, but this need checking before entering the gazetteer
-Need to add possible orthographic variants
+Need to add more possible orthographic variants for counties and localities
 Need to build a database of federal, state and municipal UCS and extract/add localities from UCs centroids for each county in the gazetteer
 Need to extract to a different file the info of the localities (e.g. biome) and store it separately (e.g. gazetteer_metada.csv)
-Need to check problems with county-disagreement between IBGE and GDAM
+Need to check problems with county-disagreement between IBGE and GDAM - Done by Renato!
 Need to define:
 
 1. How to deal with multiple locality entries with different coordinates (within and between coordinate sources)? Return average coordinates or remove duplicates?
