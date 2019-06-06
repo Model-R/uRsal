@@ -178,32 +178,43 @@ Renato ainda vai finalizar esse código...
 
 ```gazetteer.csv```
 
-good to use at county level (or best resolution available from GDAM 3.6 - state, country) for all Latin American countries
-Renato completed to add localities from TreeCo, CNCFlora and IBGE. Done!
-Renato obtained >1 million locality names from geonames for all Latin American countries, but this need checking before entering the gazetteer
+Good to use at county level (or best resolution available from GDAM 3.6 - state, country) for all Latin American countries
+
+Renato completed to add localities from TreeCo, CNCFlora and IBGE. Done by Renato!
+
+Renato obtained >1 million locality names from geonames for all Latin American countries, but this need checking before entering the gazetteer - needs to be discussed
+
 Need to add more possible orthographic variants for counties and localities
-Need to build a database of federal, state and municipal UCS and extract/add localities from UCs centroids for each county in the gazetteer
+
+Need to build a database of federal, state and municipal UCS and extract/add localities from UCs centroids for each county in the gazetteer - Volunteers?
+
 Need to extract to a different file the info of the localities (e.g. biome) and store it separately (e.g. gazetteer_metada.csv)
+
 Need to check problems with county-disagreement between IBGE and GDAM - Done by Renato!
+
 Need to define:
 
 1. How to deal with multiple locality entries with different coordinates (within and between coordinate sources)? Return average coordinates or remove duplicates?
  
-Contact people from other countries to have, in the mid term, localities for other countries of Latin America  
+Contact people from other countries to have, in the mid term, localities for other countries of Latin America. Already contact Hans ter Stegge that has a gazetteer for the Guyanas (GF, GU, and SR)  
 
 ```autores.csv```
 
-ready to use
-need to cross-check with Flora do Brasil family specialists
+Ready to use!
+
+Need to cross-check with Flora do Brasil family specialists
+
 Simplify the number of fields, store authors/taxonomist info separately (e.g. autores_metadata.csv) 
+
 Include a more international ID for each name taxonomist (e.g. ORCID)
 
 ```collections.csv```
-non-existent, but Renato have a list of many herbaria available in speciesLink and JABOT that can be used as a start
+In progress. Renato have a preliminary list of many herbaria available in speciesLink, JABOT and GBIF that can be used as a start
 list of collections available for download
 
-```species.csv``` ?? 
+```species.csv``` ?? Non existent: list of synonyms and basionyms per valid name??
 
-list of synonyms and basionyms per valid name??
 Table with county-specific threshold for the maximum distance between the original coordinate and the centroid of the county?
-Shape file with edited fields (fields and format matching the gazetteer) for the validation of geographical coordinates? Many discordances between county names from GDAM and IBGE, with some errors as well...
+
+Shape file with edited fields (fields and format matching the gazetteer) for the validation of geographical coordinates? 
+Many discordances between county names from GDAM and IBGE, with some errors as well...
