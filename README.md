@@ -1,15 +1,19 @@
 # uRsal
-repo for develpment of package to clean data Using R for South American Localities
+repo for develpment of package to retrieve, clean and validate herbarium occurrence data Using R for South American Localities
 
 ## SCOPE
 
-Goals: provide tools to perform geographical and taxonomic validation of herbarium records 
+Goals: provide tools to perform geographical and taxonomic validation of herbarium records
+
 Groups of organisms: plants, ferns and mosses??? 
+
 Geographical delimitation: Latin America, with current focus on Brazil???
+
 Potential users: taxonomists, collection curators, ecologists and conservationists
 
 Notas:
 O pacote será delimitado mais pelo formato de entrada dos dados que ao tipo de coleção. Mas até então, tudo foi testado apenas para dados de herbário. Mas o speciesLink tem outros tipos de coleção tb…. Ou seja, pensar se precisa ser apenas “herbarium records”. O GBIF mesmo possui muitos outros tipos de registros, que potencialmente já estariam no formato que precisamos, apesar de algumas colunas estarem potencialmente faltando...
+
 	
 ## INPUT, OUTPUT AND ACCESSORY FILES
 
