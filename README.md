@@ -182,6 +182,8 @@ Good to use at county level (or best resolution available from GDAM 3.6 - state,
 
 Renato completed to add localities from TreeCo, CNCFlora and IBGE. Done by Renato!
 
+Now that we have a gazetteer at locality level, we need to re-assess the resolution of some localities in the gazetteer. Some coordinates at locality level were assigned at county level previously (e.g. Brazil, Rio de Janeiro, Barra da Tijuca (locality within the city) was assigned to Brazil, Rio de Janeiro, Rio de Janeiro). 
+
 Renato obtained >1 million locality names from geonames for all Latin American countries, but this need checking before entering the gazetteer - needs to be discussed
 
 Need to add more possible orthographic variants for counties and localities
