@@ -1,5 +1,5 @@
 # uRsal
-repo for develpment of package to retrieve, clean and validate herbarium occurrence data Using R for South American Localities
+repo for development of package to retrieve, clean and validate herbarium records Using R for South American Localities
 
 ## SCOPE
 
