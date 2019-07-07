@@ -1,19 +1,6 @@
 # uRsal
 repo for development of package to retrieve, clean and validate herbarium records Using R for South American Localities
 
-## SCOPE
-
-Goals: provide tools to perform geographical and taxonomic validation of herbarium records
-
-Groups of organisms: plants, ferns and mosses??? 
-
-Geographical delimitation: Latin America, with current focus on Brazil???
-
-Potential users: taxonomists, collection curators, ecologists and conservationists
-
-Notas:
-O pacote será delimitado mais pelo formato de entrada dos dados que ao tipo de coleção. Mas até então, tudo foi testado apenas para dados de herbário. Mas o speciesLink tem outros tipos de coleção tb…. Ou seja, pensar se precisa ser apenas “herbarium records”. O GBIF mesmo possui muitos outros tipos de registros, que potencialmente já estariam no formato que precisamos, apesar de algumas colunas estarem potencialmente faltando...
-
 	
 ## INPUT, OUTPUT AND ACCESSORY FILES
 
@@ -22,13 +9,6 @@ Search input: vector of species name(s), genus or families (default = NULL: no n
 Data output: cbind(input data table, new columns related to the string editing and to geographical, taxonomical and duplicate-search information and validation/flagging)
 
 Accessory files: Gazeetter (download from a given website or github)
-
-
-## ASSUMPTION OF THE DATA VALIDATION PROCESS
-
-In case of invalid or missing coordinates, we assume that the county, state, county (and locality) are correct (i.e. locality prevails over coordinates), and so the working coordinates are taken from a gazetteer 
-
-We ignore record coordinates given only at county level, assuming that our gazetteer is a more complete/safe source of county coordinates (this may not be the case for outside Latin America). It is also important to note that if the occurrence information on the localities are indeed mistaken (eg. wrong/missing county name), than the locality won`t be found in the gazetteer and thus, even if the original coordinates are good, they will be replaced by coordinates
 
 
 ## STEP BY STEP - DATA CLEANING
